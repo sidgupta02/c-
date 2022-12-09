@@ -8,12 +8,11 @@ int main(){
 		cin>>a[i];
 	}
 	int mx=a[0];
+	cout<<mx<<" ";
 	for(int i=1;i<n;i++){
 		mx=max(mx,a[i]);
 		a[i]=mx;
-	}
-	for(int i=0;i<n;i++){
-		cout<<a[i];
+		cout<<a[i]<<" ";
 	}
 	return 0;
 }
