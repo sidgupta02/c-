@@ -1,0 +1,16 @@
+    int countPrimes(int n) {
+        int* a=new int[n];
+        for(int i=2;i<n;i++)a[i]=true;
+        int c=0;
+        for(int i=2;i*i<n;i++){
+            if(!a[i])continue;
+            for(int j=i*i;j<n;j+=i){
+                a[j]=false;
+            }
+            
+        }
+        for(int i=2;i<n;i++){
+            if(a[i])c++;
+        }
+        return c;
+    }
